@@ -9,11 +9,7 @@ stages:
   jobs:
    - job:
      steps:
-     - task: AzureCLI@2
+     - task: Bash@3
        inputs:
-        azureSubscription: 'Azure subscription 1(977812bc-0cfb-4c57-8912-a7804ccf8fba)'
-        scriptType: 'bash'
-        scriptLocation: 'scriptPath'
-        scriptPath: 'az-vm.sh'
-        addSpnToEnvironment: true
-        useGlobalConfig: true
+         targetType: 'inline'
+         script: 'sh docker.sh'
