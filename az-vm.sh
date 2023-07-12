@@ -19,6 +19,7 @@ for i in `seq 1 `; do
      --name Master$i \
      --size Standard_B1s  \
      --storage-sku StandardSSD_LRS \
+     --public-ip-address-allocation dynamic \
      --os-disk-size-gb 32 \
      --vnet-name Vnet \
      --subnet Subnet \
@@ -32,8 +33,9 @@ for i in `seq 1 `; do
    az vm create \
      --resource-group AZ \
      --name Node$i \
-     --size Standard_B2s  \
+     --size Standard_B1s  \
      --storage-sku StandardSSD_LRS \
+     --public-ip-address-allocation dynamic \
      --os-disk-size-gb 32 \
      --vnet-name Vnet \
      --subnet Subnet \
