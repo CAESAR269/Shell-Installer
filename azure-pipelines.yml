@@ -15,3 +15,4 @@ stages:
          scriptType: 'bash'
          scriptLocation: 'inlineScript'
          inlineScript: 'kube.sh'
+         useGlobalConfig: true
