@@ -16,3 +16,4 @@ stages:
          scriptLocation: 'inlineScript'
          inlineScript: 'kube.sh'
          useGlobalConfig: true
+         workingDirectory: $(System.DefaultWorkingDirectory)
