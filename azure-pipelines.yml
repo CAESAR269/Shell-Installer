@@ -13,5 +13,4 @@ stages:
        inputs:
          awsCredentials: 'AWS'
          regionName: 'ap-south-1'
-         awsCommand: 'aws'
-         awsSubCommand: 'ec2 describe-instances'
+         awsCommand: 'aws ec2 describe-instances'
