@@ -9,7 +9,9 @@ stages:
   jobs:
    - job:
      steps:
-     - task: Bash@3
+     - task: AWSCLI@1
        inputs:
-         targetType: 'inline'
-         script: 'aws ec2 describe-instances'
+         awsCredentials: 'AWS'
+         regionName: 'ap-south-1'
+         awsCommand: 'aws'
+         awsSubCommand: 'ec2 describe-instances'
