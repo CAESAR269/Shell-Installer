@@ -9,9 +9,7 @@ stages:
   jobs:
    - job:
      steps:
-     - task: AWSCLI@1
+     - task: Bash@3
        inputs:
-         awsCredentials: 'AWS'
-         regionName: 'ap-south-1'
-         awsCommand: 'aws --version'
-         awsSubCommand: 'aws --version'
+         targetType: 'inline'
+         script: 'aws --version'
