@@ -4,6 +4,7 @@ curl -sSL https://get.docker.com/ | sh
 sudo usermod -a -G docker node
 sudo usermod -a -G docker udai1729
 sudo usermod -a -G docker ubuntu
+sudo chmod 777 /var/run/docker.sock
 wget https://github.com/Mirantis/cri-dockerd/releases/download/v0.3.4/cri-dockerd_0.3.4.3-0.ubuntu-jammy_amd64.deb
 sudo dpkg -i cri-dockerd_0.3.4.3-0.ubuntu-jammy_amd64.deb
 sudo systemctl daemon-reload
