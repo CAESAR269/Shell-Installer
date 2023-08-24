@@ -19,8 +19,3 @@ echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.
 sudo apt-get update
 sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
-
-# kubeadm initialization
-sudo kubeadm init --pod-network-cidr=100.200.0.0/16 --cri-socket=unix:///var/run/cri-dockerd.sock
-source <(kubectl completion bash)
-echo "source <(kubectl completion bash)" >> ~/.bashrc
