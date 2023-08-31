@@ -1,5 +1,6 @@
-sudo openssl genrsa -out devil.key 2048
-sudo openssl req -new -key devil.key -out devil.csr -subj "/CN=devil/O=learning"
-sudo openssl x509 -req -in devil.csr -CA /etc/kubernetes/pki/ca.crt -CAkey /etc/kubernetes/pki/ca.key -CAcreateserial -out devil.crt -days 365
-sudo kubectl config set-credentials devil --client-certificate=devil.crt --client-key=devil.key
-sudo kubectl config set-context devil-context --cluster=kubernetes --user=devil
+name=ram
+sudo openssl genrsa -out $name.key 2048
+sudo openssl req -new -key $name.key -out $name.csr -subj "/CN=$name/O=learning"
+sudo openssl x509 -req -in $name.csr -CA /etc/kubernetes/pki/ca.crt -CAkey /etc/kubernetes/pki/ca.key -CAcreateserial -out $name.crt -days 365
+sudo kubectl config set-credentials $ --client-certificate=$name.crt --client-key=$name.key
+sudo kubectl config set-context $name-context --cluster=kubernetes --user=$name
