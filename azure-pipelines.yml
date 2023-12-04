@@ -9,8 +9,7 @@ stages:
   jobs:
    - job:
      steps:
-     - task: AWSCLI@1
+     - task: Bash@3
        inputs:
-         awsCredentials: 'AWS'
-         regionName: 'ap-south-1'
-         awsCommand: 'aws ec2 describe-instances'
+         targetType: 'inline'
+         script: 'printenv'
