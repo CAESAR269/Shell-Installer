@@ -18,5 +18,9 @@ stages:
          script: |
            docker pull caesar269/nginx:green
            trivy image -f json -o results.json caesar269/nginx:green
-           pwd
-      
+     - task: DownloadBuildArtifacts@1
+       inputs:
+          buildType: 'current'
+          downloadType: 'specific'
+          itemPattern: '**/*results.json'
+          downloadPath: '$(Build.ArtifactStagingDirectory)'
