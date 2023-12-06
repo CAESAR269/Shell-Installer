@@ -17,4 +17,6 @@ stages:
          targetType: 'inline'
          script: |
            docker pull caesar269/nginx:green
-           trivy image caesar269/nginx:green
+           trivy image -f json -o results.json caesar269/nginx:green
+           pwd
+      
