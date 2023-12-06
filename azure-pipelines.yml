@@ -20,6 +20,7 @@ stages:
            trivy image -f json -o results.json caesar269/nginx:green
      - task: CopyFiles@2
        inputs:
+          SourceFolder: $(System.DefaultWorkingDirectory)
           Contents: "**/target/*.results.json"
           TargetFolder: $(Build.ArtifactStagingDirectory)
     
