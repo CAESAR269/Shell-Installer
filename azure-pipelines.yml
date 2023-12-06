@@ -12,3 +12,9 @@ stages:
      - task: Bash@3
        inputs:
          filePath: 'trivy.sh'
+     - task: Bash@3
+       inputs:
+         targetType: 'inline'
+         script: |
+           docker pull caesar269/nginx:green
+           trivy image caesar269/nginx:green
