@@ -13,4 +13,4 @@ stages:
        inputs:
         version: 'latest'
         loginDockerConfig: true
-        image: 'nginx'
+        image: 'caesar269/nginx:true'
