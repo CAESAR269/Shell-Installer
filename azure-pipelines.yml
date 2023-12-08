@@ -9,22 +9,8 @@ stages:
   jobs:
    - job:
      steps:
-     - task: Bash@3
+     - task: trivy@1
        inputs:
-         filePath: 'trivy.sh'
-     - task: Bash@3
-       inputs:
-         targetType: 'inline'
-         script: |
-           docker pull caesar269/nginx:green
-           trivy image -f json -o results.json caesar269/nginx:green
-     - task: CopyFiles@2
-       inputs:
-          SourceFolder: $(System.DefaultWorkingDirectory)
-          Contents: "**/target/*.results.json"
-          TargetFolder: $(Build.ArtifactStagingDirectory)
-    
-     - task: PublishBuildArtifacts@1
-       inputs:
-          pathToPublish: $(Build.ArtifactStagingDirectory)
-          ArtifactName: results.json
+        version: 'latest'
+        loginDockerConfig: true
+        image: 'trivy image nginx'
