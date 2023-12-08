@@ -13,4 +13,4 @@ stages:
        inputs:
         version: 'latest'
         loginDockerConfig: true
-        image: 'trivy image nginx'
+        image: 'nginx'
