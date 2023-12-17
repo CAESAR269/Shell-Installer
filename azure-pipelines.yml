@@ -18,4 +18,4 @@ stages:
              echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
              sudo apt-get update
              sudo apt-get install trivy
-             trivy image caesar269/nginx:red
+             trivy image -o json results.json caesar269/nginx:red 
