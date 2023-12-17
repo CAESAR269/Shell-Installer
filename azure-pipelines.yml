@@ -1,5 +1,5 @@
 trigger:
-- main
+  - main
 
 pool:
   vmImage: ubuntu-latest
@@ -16,4 +16,4 @@ stages:
             
             - task: trivy@1
               inputs:
-              image: ubuntu
+                image: ubuntu
