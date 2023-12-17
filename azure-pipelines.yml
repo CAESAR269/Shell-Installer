@@ -6,14 +6,14 @@ pool:
   
 
 stages:
-- stage:
-  jobs::
-    - job:
-      steps:
-        - task: trivy@1
-          inputs:
-            path: .
+  - stage:
+    jobs:
+      - job:
+        steps:
+            - task: trivy@1
+              inputs:
+                path: .
             
-        - task: trivy@1
-          inputs:
-          image: ubuntu
+            - task: trivy@1
+              inputs:
+              image: ubuntu
