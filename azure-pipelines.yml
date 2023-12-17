@@ -1,8 +1,7 @@
 trigger:
 - main
 
-pool:
-  vmImage: tsar
+pool: tsar
 
 stages:
 - stage:
