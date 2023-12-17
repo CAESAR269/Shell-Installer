@@ -12,4 +12,4 @@ stages:
          inputs:
            targetType: inline
            script: |
-             trivy image -f json -o results.json caesar269/nginx:red
+             trivy image caesar269/nginx:red > nginx-red.json
