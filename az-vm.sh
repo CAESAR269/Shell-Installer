@@ -19,6 +19,7 @@ for i in `seq 1 `; do
      --name Master$i \
      --size Standard_B1s  \
      --storage-sku StandardSSD_LRS \
+     --public-ip-sku Basic \
      --public-ip-address-allocation dynamic \
      --os-disk-size-gb 32 \
      --vnet-name Vnet \
@@ -35,6 +36,7 @@ for i in `seq 1 `; do
      --name Node$i \
      --size Standard_B1s  \
      --storage-sku StandardSSD_LRS \
+     --public-ip-sku Basic \
      --public-ip-address-allocation dynamic \
      --os-disk-size-gb 32 \
      --vnet-name Vnet \
